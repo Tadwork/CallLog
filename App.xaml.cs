@@ -6,6 +6,7 @@
     using System.Windows;
     using Custom.Windows;
     using System.Data;
+    using SQLite;
     #endregion
 
     /// <summary>
@@ -55,9 +56,11 @@
         protected override void OnStartup(StartupEventArgs e, bool isFirstInstance)
         {
             base.OnStartup(e, isFirstInstance);
-
+            var db = new SQLiteConnection("calls.db");
+            db.CreateTable<CallItem>();
             if (!isFirstInstance)
             {
+                
             //    Window window = MainWindow;
                 //const string message = "I am not the first application, and I'm going to shutdown!";
                 //const string title = "TestApplication - Next instance";
@@ -79,7 +82,7 @@
             base.OnStartupNextInstance(e);
             if (e.Args.Length > 0)
             {
-                Calls.Columns.AddRange(new DataColumn[] { 
+                Calls.Columns.Add(new DataColumn { 
                     new DataColumn("Name"),
                     new DataColumn("phone"),
                     new DataColumn("time")});
@@ -87,12 +90,9 @@
                 r["Name"] = e.Args[0];
                 r["phone"] = e.Args[1];
                 r["time"] = DateTime.Now;
-                
-
-
                 Calls.Rows.Add(r);
             }
-            //Window window = MainWindow;
+            //
             //string message = "Another instance of this application was started";
             //const string title = "TestApplication - First instance";
             //if (e.Args.Length > 0)

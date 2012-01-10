@@ -4,7 +4,8 @@
     using System;
     using System.Diagnostics;
     using System.Windows;
-
+    using System.Data;
+    using SQLite;
     #endregion
 
     /// <summary>
@@ -37,7 +38,7 @@
         //        MessageBox.Show(this, "An exception occurred while spawning another application" + Environment.NewLine + exc);
         //    }
         //}
-
+        public DataTable Calls;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CallGrid.ItemsSource = 
