@@ -1,1 +1,17 @@
 C:\Users\tzvi\Documents\CallLog\call-log\bin\Debug\FPECallLog.exe.config
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\bin\Debug\FPECallLog.exe.config
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\Window1.baml
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\Window1.g.cs
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\App.g.cs
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\FPECallLog_MarkupCompile.cache
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\FPECallLog.g.resources
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\FPECallLog.Properties.Resources.resources
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\bin\Debug\FPECallLog.exe
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\bin\Debug\FPECallLog.pdb
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\bin\Debug\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\bin\Debug\Custom.Windows.pdb
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\FPECallLog.exe
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\obj\Debug\FPECallLog.pdb

@@ -1,32 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Data;
-using SQLite;
-
+using ServiceStack.OrmLite.Sqlite;
+using ServiceStack.DataAnnotations;
+using ServiceStack.OrmLite;
 namespace FPECallLog
 {
     public class CallItem
     {
-        [PrimaryKey, AutoIncrement]
+        [AutoIncrement,Index(Unique = true)]
         public int Id { get; set; }
-        [Indexed]
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime Time { get; set; }
         
     }
-    public class Database : SQLiteConnection
+    public class Database
     {
+        IDbCommand dbCmd;
         public Database(string path)
-            : base(path)
         {
-            CreateTable<CallItem>();
+            //Use in-memory Sqlite DB instead
+            var dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Calls.db");
+            var dbFactory = new OrmLiteConnectionFactory(dbPath, false, SqliteOrmLiteDialectProvider.Instance);
+
+            //Non-intrusive: All extension methods hang off System.Data.* interfaces
+            IDbConnection dbConn = dbFactory.OpenDbConnection();
+            dbCmd = dbConn.CreateCommand();
+
+            //Re-Create all table schemas:
+            dbCmd.DropTable<CallItem>();
+            dbCmd.CreateTable<CallItem>();
         }
         public IEnumerable<CallItem> TodaysCalls()
         {
-            return Table<CallItem>().Where(x => x.Time.Date == DateTime.Now.Date);
+            return dbCmd.Select<CallItem>().Where(x => x.Time.Date == DateTime.Now.Date);
         }
 
         public CallItem QueryCall(int id)
@@ -45,7 +56,7 @@ namespace FPECallLog
         public void AddCall(CallItem call)
         {
             var s = Insert(call);
-            Console.WriteLine("{0}", s.Id);
+            //Console.WriteLine("{0}", s.Id);
         }
    
     }
