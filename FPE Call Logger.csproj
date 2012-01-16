@@ -126,7 +126,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Custom.Windows\Custom.Windows.csproj">
+    <ProjectReference Include="InstanceAwareWindow\Custom.Windows.csproj">
       <Project>{4477F780-46BA-4574-8B85-E37BC67DEB7B}</Project>
       <Name>Custom.Windows</Name>
     </ProjectReference>

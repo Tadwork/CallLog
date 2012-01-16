@@ -17,4 +17,36 @@ namespace FPECallLog
         public DateTime Time { get; set; }
         
     }
+    public class Database : SQLiteConnection
+    {
+        public Database(string path)
+            : base(path)
+        {
+            CreateTable<CallItem>();
+        }
+        public IEnumerable<CallItem> TodaysCalls()
+        {
+            return Table<CallItem>().Where(x => x.Time.Date == DateTime.Now.Date);
+        }
+
+        public CallItem QueryCall(int id)
+        {
+            return (from s in Table<CallItem>()
+                    where s.Id == id
+                    select s).FirstOrDefault();
+        }
+        public void AddCall(string name,string phone)
+        {
+            Insert(new CallItem()
+            {
+                Name = name,Phone = phone,Time = DateTime.Now
+            });
+        }
+        public void AddCall(CallItem call)
+        {
+            var s = Insert(call);
+            Console.WriteLine("{0}", s.Id);
+        }
+   
+    }
 }

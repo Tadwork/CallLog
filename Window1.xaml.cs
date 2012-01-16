@@ -13,12 +13,15 @@
     /// </summary>
     public partial class Window1 : Window
     {
+        public Database  db;
         /// <summary>
         ///   Initializes a new instance of the <see cref = "Window1" /> class.
         /// </summary>
         public Window1()
         {
             InitializeComponent();
+            var dbPath = System.IO.Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments), "Calls.db");
+			db = new Database (dbPath);
         }
         /// <summary>
         ///   Handles the Click event of the buttonSpawn control.
@@ -38,10 +41,10 @@
         //        MessageBox.Show(this, "An exception occurred while spawning another application" + Environment.NewLine + exc);
         //    }
         //}
-        public DataTable Calls;
+       
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            CallGrid.ItemsSource = 
+            CallGrid.ItemsSource = db.TodaysCalls();
         }
     }
 }

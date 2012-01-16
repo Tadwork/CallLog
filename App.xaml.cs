@@ -14,6 +14,7 @@
     /// </summary>
     public partial class App : InstanceAwareApplication
     {
+        public Database db;
         /// <summary>
         ///   Initializes a new instance of the <see cref = "App" /> class.
         /// </summary>
@@ -56,8 +57,8 @@
         protected override void OnStartup(StartupEventArgs e, bool isFirstInstance)
         {
             base.OnStartup(e, isFirstInstance);
-            var db = new SQLiteConnection("calls.db");
-            db.CreateTable<CallItem>();
+            StartDB();
+            AddCallFromArgs(e.Args);
             if (!isFirstInstance)
             {
                 
@@ -72,7 +73,14 @@
                 Shutdown(1);
             }
         }
-
+        private void StartDB(){
+            var dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Calls.db");
+            db = new Database(dbPath);
+        }
+        private void AddCallFromArgs(string[] args)
+        {
+            db.AddCall(args[0], args[1]);
+        }
         /// <summary>
         /// Raises the <see cref="Custom.Windows.InstanceAwareApplication.StartupNextInstance"/> event.
         /// </summary>
@@ -80,17 +88,20 @@
         protected override void OnStartupNextInstance(StartupNextInstanceEventArgs e)
         {
             base.OnStartupNextInstance(e);
+           
             if (e.Args.Length > 0)
             {
-                Calls.Columns.Add(new DataColumn { 
-                    new DataColumn("Name"),
-                    new DataColumn("phone"),
-                    new DataColumn("time")});
-                DataRow r= Calls.NewRow();
-                r["Name"] = e.Args[0];
-                r["phone"] = e.Args[1];
-                r["time"] = DateTime.Now;
-                Calls.Rows.Add(r);
+                StartDB();
+                AddCallFromArgs(e.Args);
+                //Calls.Columns.Add(new DataColumn { 
+                //    new DataColumn("Name"),
+                //    new DataColumn("phone"),
+                //    new DataColumn("time")});
+                //DataRow r= Calls.NewRow();
+                //r["Name"] = e.Args[0];
+                //r["phone"] = e.Args[1];
+                //r["time"] = DateTime.Now;
+                //Calls.Rows.Add(r);
             }
             //
             //string message = "Another instance of this application was started";
