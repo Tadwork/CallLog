@@ -16,11 +16,19 @@ namespace FPECallLog
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime Time { get; set; }
-        
+        public override string ToString()
+        {
+            return Name + " " + Phone;
+        }        
     }
     public class Database
     {
         IDbCommand dbCmd;
+        #region Events
+        public event DataUpdatedHandler DataUpdated;
+        public EventArgs e = null;
+        public delegate void DataUpdatedHandler(CallItem c, EventArgs e); 
+        #endregion
         public Database(string path)
         {
             //Use in-memory Sqlite DB instead
@@ -31,33 +39,39 @@ namespace FPECallLog
             IDbConnection dbConn = dbFactory.OpenDbConnection();
             dbCmd = dbConn.CreateCommand();
 
-            //Re-Create all table schemas:
-            dbCmd.DropTable<CallItem>();
-            dbCmd.CreateTable<CallItem>();
+            ////Re-Create all table schemas:
+            //dbCmd.DropTable<CallItem>();
+            //dbCmd.CreateTable<CallItem>();
         }
-        public IEnumerable<CallItem> TodaysCalls()
+
+        #region Read
+        public IList<CallItem> TodaysCalls()
         {
-            return dbCmd.Select<CallItem>().Where(x => x.Time.Date == DateTime.Now.Date);
+            return dbCmd.Select<CallItem>().Where(x => x.Time.Date == DateTime.Now.Date).ToList();
         }
 
         public CallItem QueryCall(int id)
         {
-            return (from s in Table<CallItem>()
-                    where s.Id == id
-                    select s).FirstOrDefault();
-        }
-        public void AddCall(string name,string phone)
+            return dbCmd.Select<CallItem>().Where(x => x.Id == id).FirstOrDefault();
+        } 
+        #endregion
+        #region Create
+        public void AddCall(string name, string phone)
         {
-            Insert(new CallItem()
+
+            AddCall(new CallItem()
             {
-                Name = name,Phone = phone,Time = DateTime.Now
+                Name = name,
+                Phone = phone,
+                Time = DateTime.Now
             });
         }
         public void AddCall(CallItem call)
         {
-            var s = Insert(call);
+            dbCmd.Insert<CallItem>(call);
             //Console.WriteLine("{0}", s.Id);
-        }
+        } 
+        #endregion
    
     }
 }

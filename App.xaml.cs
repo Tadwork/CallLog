@@ -6,7 +6,6 @@
     using System.Windows;
     using Custom.Windows;
     using System.Data;
-    using SQLite;
     #endregion
 
     /// <summary>
@@ -79,7 +78,10 @@
         }
         private void AddCallFromArgs(string[] args)
         {
-            db.AddCall(args[0], args[1]);
+            if (args.Length == 2)
+            {
+                db.AddCall(args[0], args[1]);
+            }
         }
         /// <summary>
         /// Raises the <see cref="Custom.Windows.InstanceAwareApplication.StartupNextInstance"/> event.
@@ -93,15 +95,7 @@
             {
                 StartDB();
                 AddCallFromArgs(e.Args);
-                //Calls.Columns.Add(new DataColumn { 
-                //    new DataColumn("Name"),
-                //    new DataColumn("phone"),
-                //    new DataColumn("time")});
-                //DataRow r= Calls.NewRow();
-                //r["Name"] = e.Args[0];
-                //r["phone"] = e.Args[1];
-                //r["time"] = DateTime.Now;
-                //Calls.Rows.Add(r);
+ 
             }
             //
             //string message = "Another instance of this application was started";

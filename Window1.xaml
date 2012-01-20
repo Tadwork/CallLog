@@ -9,10 +9,8 @@
 			<RowDefinition/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" Height="261" HorizontalAlignment="Left" Name="CallGrid" VerticalAlignment="Top" Width="278" ItemsSource="{Binding}" />
-        <StackPanel Height="153" HorizontalAlignment="Left" Margin="0,259,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="280">
-            <Button Height="36" />
-
-        </StackPanel>
+        <ListBox ItemsSource="{Binding Calls}">
+         
+        </ListBox>
     </Grid>
 </Window>
