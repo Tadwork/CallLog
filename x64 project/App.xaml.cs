@@ -6,6 +6,8 @@
     using System.Windows;
     using Custom.Windows;
     using System.Data;
+    using NDesk.Options;
+    using System.Collections.Generic;
     #endregion
 
     /// <summary>
@@ -82,10 +84,33 @@
         }
         private void AddCallFromArgs(string[] args)
         {
-            if (args.Length == 2)
+            //if (args.Length == 2)
+            //{
+            //    db.AddCall(args[0], args[1]);
+            //}
+            bool show_help = false;
+            string name = "";
+            string phone = "";
+
+            var p = new OptionSet() {
+    { "n|name=", "the {NAME} of caller.",
+       (string n) => name = n },
+   { "p|phone=", "the {Phone} of caller.",
+       (string d) => phone = d },
+    //{ "h|help",  "show this message and exit", 
+    //   v => show_help = v != null },
+            };
+            List<string> extra;
+            try
             {
-                db.AddCall(args[0], args[1]);
+                extra = p.Parse(args);
+db.AddCall(extra[0], extra[1]);
             }
+            catch (OptionException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
         /// <summary>
         /// Raises the <see cref="Custom.Windows.InstanceAwareApplication.StartupNextInstance"/> event.

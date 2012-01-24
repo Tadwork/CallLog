@@ -9,7 +9,8 @@
 			<RowDefinition/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-        <ListBox ItemsSource="{Binding Calls}" Name="List">
+        <ListBox ItemsSource="{Binding Calls}" SelectionChanged="List_SelectionChanged" Name="List">
+            
          
         </ListBox>
     </Grid>
