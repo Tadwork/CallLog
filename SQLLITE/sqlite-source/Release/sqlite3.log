@@ -1,9 +1,0 @@
-﻿Build started 1/16/2012 2:16:09 PM.
-     1>Project "C:\Users\Tzvi\Documents\VS Projects\Call-Log\SQLLITE\sqlite-source\sqlite3.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Release\sqlite3.lastbuildstate".
-     1>Done Building Project "C:\Users\Tzvi\Documents\VS Projects\Call-Log\SQLLITE\sqlite-source\sqlite3.vcxproj" (clean target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.13
