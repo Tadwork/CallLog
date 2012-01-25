@@ -1,0 +1,16 @@
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\Release\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\Release\Custom.Windows.pdb
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\Custom.Windows.Properties.Resources.resources
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\GenerateResource.write.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Release\Custom.Windows.pdb
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\bin\Release\Custom.Windows.dll
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\bin\Release\Custom.Windows.pdb
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\ResolveAssemblyReference.cache
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\Custom.Windows.Properties.Resources.resources
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\GenerateResource.read.1.tlog
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\GenerateResource.write.1.tlog
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\Custom.Windows.dll
+C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Release\Custom.Windows.pdb

@@ -1,0 +1,8 @@
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\x86\Debug\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\x86\Debug\Custom.Windows.pdb
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\Custom.Windows.Properties.Resources.resources
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Debug\Custom.Windows.pdb
