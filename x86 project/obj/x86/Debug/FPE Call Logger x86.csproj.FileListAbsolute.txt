@@ -30,3 +30,6 @@ C:\Users\tzvi\Documents\call-log\x86 project\obj\x86\Debug\GenerateResource.read
 C:\Users\tzvi\Documents\call-log\x86 project\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\tzvi\Documents\call-log\x86 project\obj\x86\Debug\FPECallLog.exe
 C:\Users\tzvi\Documents\call-log\x86 project\obj\x86\Debug\FPECallLog.pdb
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\x86 project\bin\x86\Debug\FPECallLog.exe.config
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\x86 project\obj\x86\Debug\FPECallLog.exe
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\x86 project\obj\x86\Debug\FPECallLog.pdb

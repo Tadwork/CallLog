@@ -50,10 +50,16 @@ using System.ComponentModel;
 
         private void List_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            CallItem i= (CallItem)e.AddedItems[0];
-            string path = "C:\\Users\\tzvi\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";
-            string args = "\"docs.google.com/a/friedmanpe.com/spreadsheet/viewform?pli=1&hl=en_US&formkey=dGhvdERPU0hjREV5S2ZSb0VIenVXN0E6MQ&entry_0=" + i.Name + "&entry_5=" +i.Phone +"&entry_8=Tzvi\"";
-            Process.Start(path,args);
+            try
+            {
+                CallItem i = (CallItem)e.AddedItems[0];
+                string path = "C:\\Users\\tzvi\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";
+                string args = "\"docs.google.com/a/friedmanpe.com/spreadsheet/viewform?pli=1&hl=en_US&formkey=dGhvdERPU0hjREV5S2ZSb0VIenVXN0E6MQ&entry_0=" + i.Name + "&entry_5=" + i.Phone + "&entry_8=Tzvi\"";
+                Process.Start(path, args);
+            }
+            catch { 
+            
+            }
         }
        
 
