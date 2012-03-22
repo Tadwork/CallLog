@@ -1,0 +1,54 @@
+function onOpen() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var menuEntries = [ {name: "Archive", functionName: "ArchiveFunction"},{name: "Email", functionName: "EmailFunction"}];
+  ss.addMenu("FPE", menuEntries);
+}
+function ArchiveFunction() {
+  var s = Open();
+  Email(s);
+  Archive(s);
+}
+function EmailFunction() {
+  var s = Open();
+ 
+  Email(s);
+}
+function Open() {
+  var ss = SpreadsheetApp.openById("0Am-gGnR5Jb8ndGhvdERPU0hjREV5S2ZSb0VIenVXN0E");
+  return ss.getSheetByName("DATA BASE");
+}
+function Email(s) {
+  var startRow = 1;  // First row of data to process
+  var numRows = s.getLastRow();   // Number of rows to process
+  
+  var dataRange = s.getRange(startRow, 1, numRows, 9)
+  // Fetch values for each row in the Range.
+  var data = dataRange.getValues();
+  var body = "<HTML><BODY>"
+      +  "<table border='1'>";
+  for (i in data) {
+    var row = data[i];
+    var time = row[0];  // First column
+    var caller = row[2];// Second column
+    var comm = row[4];  
+    var phone = row[5];
+    var email = row[7];  
+    var user = row[8];
+      body +=     "<tr>"
+      +      "<td>"+ time +"</td>"
+      +      "<td>"+ caller +"</td>"
+      +      "<td>"+ comm +"</td>"
+      +      "<td>"+ phone +"</td>"
+      +      "<td>"+ email +"</td>"
+      +      "<td>"+ user +"</td>"
+      +     "</tr>";
+  
+  }      
+  body+=    "</table>"
+      +     "</HTML></BODY>";
+  MailApp.sendEmail('Lynn@Friedmanpe.com',"Call Log", "see html",{htmlBody: body});
+}
+function Archive(s) {
+  var newss = SpreadsheetApp.create(Utilities.formatDate(new Date(), "GMT", "yyyy-MM-dd"));
+  s.copyTo(newss);
+  s.deleteRows(2,s.getLastRow());
