@@ -61,7 +61,7 @@ namespace FPECallLog
             AddCall(new CallItem()
             {
                 Name = name,
-                Phone = phone,
+                Phone = phone.Remove(phone.IndexOf("@")),
                 Time = DateTime.Now
             });
         }
