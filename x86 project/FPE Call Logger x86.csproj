@@ -150,6 +150,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -164,12 +165,30 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Accounts.cs">
+      <Link>Accounts.cs</Link>
+    </Compile>
+    <Compile Include="..\Accounts.Designer.cs">
+      <Link>Accounts.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Accounts.settings</DependentUpon>
+    </Compile>
     <Compile Include="..\App.xaml.cs">
       <Link>App.xaml.cs</Link>
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="..\CallItem.cs">
       <Link>CallItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Phone.Designer.cs">
+      <Link>Phone.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Phone.settings</DependentUpon>
+    </Compile>
+    <Compile Include="..\PhoneConfig.cs">
+      <Link>PhoneConfig.cs</Link>
     </Compile>
     <Compile Include="..\Window1.xaml.cs">
       <Link>Window1.xaml.cs</Link>
@@ -192,8 +211,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="..\Accounts.settings">
+      <Link>Accounts.settings</Link>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Accounts.Designer.cs</LastGenOutput>
+    </None>
     <None Include="..\app.config">
       <Link>app.config</Link>
+    </None>
+    <None Include="..\Phone.settings">
+      <Link>Phone.settings</Link>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Phone.Designer.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

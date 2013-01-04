@@ -11,13 +11,12 @@ C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\Debug\Custo
 C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Debug\Custom.Windows.Properties.Resources.resources
 C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Debug\Custom.Windows.dll
 C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Debug\Custom.Windows.pdb
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\bin\Debug\Custom.Windows.dll
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\bin\Debug\Custom.Windows.pdb
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.Properties.Resources.resources
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\GenerateResource.read.1.tlog
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\GenerateResource.write.1.tlog
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.dll
-C:\Users\tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.pdb
 C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Debug\Custom.Windows.csprojResolveAssemblyReference.cache
 C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\Debug\Custom.Windows.csproj.GenerateResource.Cache
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\bin\Debug\Custom.Windows.dll
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\bin\Debug\Custom.Windows.pdb
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.csprojResolveAssemblyReference.cache
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.Properties.Resources.resources
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.csproj.GenerateResource.Cache
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.dll
+C:\Users\Tzvi\Documents\call-log\InstanceAwareWindow\obj\Debug\Custom.Windows.pdb

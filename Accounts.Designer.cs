@@ -13,11 +13,11 @@ namespace FPECallLog {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Phone : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Accounts : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Phone defaultInstance = ((Phone)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Phone())));
+        private static Accounts defaultInstance = ((Accounts)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Accounts())));
         
-        public static Phone Default {
+        public static Accounts Default {
             get {
                 return defaultInstance;
             }
@@ -25,130 +25,130 @@ namespace FPECallLog {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CFBFlag {
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public string AccountName {
             get {
-                return ((bool)(this["CFBFlag"]));
+                return ((string)(this["AccountName"]));
             }
             set {
-                this["CFBFlag"] = value;
+                this["AccountName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string CFBNumber {
+        [global::System.Configuration.DefaultSettingValueAttribute("Sipek SIP Notifier")]
+        public string DisplayName {
             get {
-                return ((string)(this["CFBNumber"]));
+                return ((string)(this["DisplayName"]));
             }
             set {
-                this["CFBNumber"] = value;
+                this["DisplayName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CFNRFlag {
+        [global::System.Configuration.DefaultSettingValueAttribute("*")]
+        public string DomainName {
             get {
-                return ((bool)(this["CFNRFlag"]));
+                return ((string)(this["DomainName"]));
             }
             set {
-                this["CFNRFlag"] = value;
+                this["DomainName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string CFNRNumber {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Enabled {
             get {
-                return ((string)(this["CFNRNumber"]));
+                return ((bool)(this["Enabled"]));
             }
             set {
-                this["CFNRNumber"] = value;
+                this["Enabled"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CFUFlag {
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
+        public string HostName {
             get {
-                return ((bool)(this["CFUFlag"]));
+                return ((string)(this["HostName"]));
             }
             set {
-                this["CFUFlag"] = value;
+                this["HostName"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string CFUNumber {
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public string Id {
             get {
-                return ((string)(this["CFUNumber"]));
+                return ((string)(this["Id"]));
             }
             set {
-                this["CFUNumber"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool DNDFlag {
-            get {
-                return ((bool)(this["DNDFlag"]));
-            }
-            set {
-                this["DNDFlag"] = value;
+                this["Id"] = value;
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int DefaultAccountIndex {
+        public int Index {
             get {
-                return ((int)(this["DefaultAccountIndex"]));
+                return ((int)(this["Index"]));
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IsNull {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Password {
             get {
-                return ((bool)(this["IsNull"]));
+                return ((string)(this["Password"]));
             }
             set {
-                this["IsNull"] = value;
+                this["Password"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool PublishEnabled {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ProxyAddress {
             get {
-                return ((bool)(this["PublishEnabled"]));
+                return ((string)(this["ProxyAddress"]));
             }
             set {
-                this["PublishEnabled"] = value;
+                this["ProxyAddress"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5060")]
-        public int SIPPort {
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int RegState {
             get {
-                return ((int)(this["SIPPort"]));
+                return ((int)(this["RegState"]));
             }
             set {
-                this["SIPPort"] = value;
+                this["RegState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public string UserName {
+            get {
+                return ((string)(this["UserName"]));
+            }
+            set {
+                this["UserName"] = value;
             }
         }
     }

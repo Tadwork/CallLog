@@ -1,4 +1,4 @@
-﻿namespace SIP_Notifier {
+﻿namespace FPECallLog{
     
     
     // Diese Klasse ermöglicht die Behandlung bestimmter Ereignisse der Einstellungsklasse:

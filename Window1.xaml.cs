@@ -23,7 +23,7 @@ namespace FPECallLog
                #region Properties
         // Get call manager instance
         CCallManager CallManager = CCallManager.Instance;
-
+        
         private PhoneConfig _config = new PhoneConfig();
         internal PhoneConfig Config
         {
@@ -46,7 +46,7 @@ namespace FPECallLog
         {
             InitializeComponent();
             InitializeSip();
-            
+            InitializeNotifyIcon();
         }
         /// <summary>
         ///   Handles the Click event of the buttonSpawn control.
@@ -89,29 +89,29 @@ namespace FPECallLog
 
 
         #region Methods
-        private void InitializeWindow()
+        private void InitializeNotifyIcon()
         {
-            this.WindowState = FormWindowState.Minimized;
-            this.Visible = false;
-            this.ShowInTaskbar = false;
+            //this.WindowState = FormWindowState.Minimized;
+            //this.Visible = false;
+            //this.ShowInTaskbar = false;
 
-            notifyIcon1.Icon = this.Icon;
-            notifyIcon1.Text = "SIP Notifier";   // Eigenen Text einsetzen
+            //notifyIcon1.Icon = this.Icon;
+            notifyIcon1.Text = "SIP Notifier"; 
             notifyIcon1.Visible = true;
             notifyIcon1.DoubleClick += new EventHandler(NotifyIconDoubleClick);
 
 
 
-            contextMenu.MenuItems.Add(0,
-                new MenuItem("Show/Hide", new System.EventHandler(NotifyIconDoubleClick)));
-            contextMenu.MenuItems.Add(1,
-                new MenuItem("Exit", new System.EventHandler(notifyIcon1_Close_Click)));
+            //contextMenu.MenuItems.Add(0,
+            //    new MenuItem("Show/Hide", new System.EventHandler(NotifyIconDoubleClick)));
+            //contextMenu.MenuItems.Add(1,
+            //    new MenuItem("Exit", new System.EventHandler(notifyIcon1_Close_Click)));
 
-            notifyIcon1.ContextMenu = contextMenu;
+            //notifyIcon1.ContextMenu = contextMenu;
 
-            if (SIP_Notifier.Accounts.Default.HostName == "localhost")
+            if (FPECallLog.Accounts.Default.HostName == "localhost")
             {
-                notifyIcon1.BalloonTipTitle = "SIP Notifier";
+                notifyIcon1.BalloonTipTitle = "FPE Call Log";
                 notifyIcon1.BalloonTipText = "Doubleclick this icon to set up your SIP account!";
                 notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
                 notifyIcon1.ShowBalloonTip(30);
@@ -121,10 +121,10 @@ namespace FPECallLog
 
         private void InitializeSip()
         {
-            if (registered == true || SIP_Notifier.Accounts.Default.HostName == "")
+            if (registered == true || FPECallLog.Accounts.Default.HostName == "")
                 return;
 
-            textBoxRegState.Text = "Connecting";
+            ConnectionStatus.Content = "Connecting";
             // register callbacks
             CallManager.CallStateRefresh += new DCallStateRefresh(CallManager_CallStateRefresh);
             // ICallProxyInterface.CallStateChanged += new DCallStateChanged(CallManager_OnCallStateChanged);
@@ -155,7 +155,7 @@ namespace FPECallLog
             pjsipRegistrar.Instance.unregisterAccounts();
             CallManager.Shutdown();
             pjsipStackProxy.Instance.shutdown();
-            textBoxRegState.Text = "Disconnected";
+            ConnectionStatus.Content = "Disconnected";
 
             registered = false;
         }
@@ -171,8 +171,8 @@ namespace FPECallLog
         void Instance_AccountStateChanged(int accountId, int accState)
         {
             // MUST synchronize threads
-            if (InvokeRequired)
-                this.BeginInvoke(new DAccountStateChanged(OnRegistrationUpdate), new object[] { accountId, accState });
+            if (!(App.Current.Dispatcher.Thread == System.Threading.Thread.CurrentThread))
+                this.Dispatcher.BeginInvoke(new DAccountStateChanged(OnRegistrationUpdate), new object[] { accountId, accState });
             else
                 OnRegistrationUpdate(accountId, accState);
         }
@@ -181,8 +181,8 @@ namespace FPECallLog
         void CallManager_CallStateRefresh(int sessionId)
         {
             // MUST synchronize threads
-            if (InvokeRequired)
-                this.BeginInvoke(new DCallStateRefresh(OnStateUpdate), new object[] { sessionId });
+            if (!(App.Current.Dispatcher.Thread == System.Threading.Thread.CurrentThread))
+                this.Dispatcher.BeginInvoke(new DCallStateRefresh(OnStateUpdate), new object[] { sessionId });
             else
                 OnStateUpdate(sessionId);
         }
@@ -199,14 +199,14 @@ namespace FPECallLog
         void CallManager_IncomingCallNotification(int sessionId, string number, string info)
         {
             // MUST synchronize threads
-            if (InvokeRequired)
-                this.BeginInvoke(new DIncomingCallNotification(OnIncomingCall), new object[] { sessionId, number, info });
+            if (!(App.Current.Dispatcher.Thread == System.Threading.Thread.CurrentThread))
+                this.Dispatcher.BeginInvoke(new DIncomingCallNotification(OnIncomingCall), new object[] { sessionId, number, info });
             else
                 OnIncomingCall(sessionId, number, info);
         }
         #endregion
 
-        #region Synhronized callbacks
+        #region Synchronized callbacks
         private void OnRegistrationUpdate(int accountId, int accState)
         {
             string stateDescription = "";
@@ -235,7 +235,7 @@ namespace FPECallLog
                 default: stateDescription = "Unknown";
                     break;
             }
-            textBoxRegState.Text = accState.ToString() + " - " + stateDescription;
+            ConnectionStatus.Content = accState.ToString() + " - " + stateDescription;
         }
 
         private void OnStateUpdate(int sessionId)
@@ -244,7 +244,7 @@ namespace FPECallLog
             if (text == "NULL")
                 text = "IDLE";
 
-            textBoxCallState.Text = text;
+            CallStatus.Content = text;
         }
 
         /* private void OnCallStateChanged(int callId, ESessionState callState, string info)
@@ -272,12 +272,17 @@ namespace FPECallLog
             //if (contact != "")
             //  number = contact + " (" + number + ")";
 
-            textBoxCallState.Text = incall.StateId.ToString();
-            textBoxLastCallNumber.Text = number;
-            textBoxLastCallDate.Text = DateTime.Now.ToString();
+            CallStatus.Content = incall.StateId.ToString();
+            // TODO put the code here to put the call in the DB
+            Database  db =  new Database();
+            string name = incall.CallingName;
+            db.AddCall(name, number);
+             
+            //textBoxLastCallNumber.Text = number;
+            //textBoxLastCallDate.Text = DateTime.Now.ToString();
 
             notifyIcon1.BalloonTipTitle = "New Call";
-            notifyIcon1.BalloonTipText = "From: " + number + "\r\n" + info;
+            notifyIcon1.BalloonTipText = "From: " + name + " " + number + "\r\n" + info;
             notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
             notifyIcon1.ShowBalloonTip(30);
 
@@ -294,39 +299,39 @@ namespace FPECallLog
         #region Button Handlers
         private void NotifyIconDoubleClick(object sender, System.EventArgs e)
         {
-            if (this.ShowInTaskbar == true)
-            {
-                this.ShowInTaskbar = false;
-                this.Visible = false;
-            }
-            else
-            {
-                SIP_Notifier.Accounts settings = SIP_Notifier.Accounts.Default;
-                textBoxHostName.Text = settings.HostName;
-                textBoxUserName.Text = settings.UserName;
-                textBoxPassword.Text = settings.Password;
-                buttonSave.Enabled = false;
-                this.ShowInTaskbar = true;
-                this.Visible = true;
+            //if (this.ShowInTaskbar == true)
+            //{
+            //    this.ShowInTaskbar = false;
+            //    this.t = false;
+            //}
+            //else
+            //{
+                FPECallLog.Accounts settings = FPECallLog.Accounts.Default;
+                TxtServer.Text = settings.HostName;
+                TxtAccount.Text = settings.UserName;
+                TxtPassword.Text = settings.Password;
+                BtnSave.IsEnabled = true;
+                //this.ShowInTaskbar = true;
+                //this.Visible = true;
                 //this.BringToFront();
-            }
+            //}
 
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (textBoxHostName.Text == "")
+            if (TxtServer.Text == "")
             {
-                MessageBox.Show("Server hostname must not be empty!");
+                System.Windows.MessageBox.Show("Server hostname must not be empty!");
                 return;
             }
-            buttonSave.Enabled = false;
-            SIP_Notifier.Accounts settings = SIP_Notifier.Accounts.Default;
+            BtnSave.IsEnabled = false;
+            FPECallLog.Accounts settings = FPECallLog.Accounts.Default;
 
-            settings.HostName = textBoxHostName.Text;
-            settings.UserName = textBoxUserName.Text;
-            settings.Id = textBoxUserName.Text;
-            settings.Password = textBoxPassword.Text;
+            settings.HostName = TxtServer.Text;
+            settings.UserName = TxtAccount.Text;
+            settings.Id = TxtAccount.Text;
+            settings.Password = TxtPassword.Text;
 
             settings.Save();
             RestartSip();
@@ -334,12 +339,12 @@ namespace FPECallLog
 
         private void linkLabelCancel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SIP_Notifier.Accounts settings = SIP_Notifier.Accounts.Default;
+            FPECallLog.Accounts settings = FPECallLog.Accounts.Default;
 
-            textBoxHostName.Text = settings.HostName;
-            textBoxUserName.Text = settings.UserName;
-            textBoxPassword.Text = settings.Password;
-            buttonSave.Enabled = false;
+            TxtServer.Text = settings.HostName;
+            TxtAccount.Text = settings.UserName;
+            TxtPassword.Text = settings.Password;
+            BtnSave.IsEnabled = false;
         }
 
         //private void notifyIcon1_Close_Click(object sender, EventArgs e)
@@ -363,21 +368,16 @@ namespace FPECallLog
         //    }
         //}
 
-        //private void textBoxHostName_TextChanged(object sender, EventArgs e)
-        //{
-        //    buttonSave.Enabled = true;
-        //}
-
-        //private void textBoxUserName_TextChanged(object sender, EventArgs e)
-        //{
-        //    buttonSave.Enabled = true;
-        //}
-
-        //private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        //{
-        //    buttonSave.Enabled = true;
-        //}
+     
         #endregion
+
+        private void AccountInfo_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            
+                if(null != BtnSave)BtnSave.IsEnabled = true;
+        }
+
+
        
     }
     public class CallViewModel
@@ -394,8 +394,8 @@ namespace FPECallLog
                 UpdateCalls();
             }
             public void UpdateCalls(){
-                var dbPath = System.IO.Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments), "Calls.db");
-			    db = new Database (dbPath);
+                //var dbPath = System.IO.Path.Combine (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments), "Calls.db");
+			    db = new Database();
                 IList<CallItem> calls = db.TodaysCalls();
                 _callsView = CollectionViewSource.GetDefaultView(calls);
             }

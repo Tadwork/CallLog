@@ -28,7 +28,7 @@ namespace FPECallLog
         public EventArgs e = null;
         public delegate void DataUpdatedHandler(CallItem c, EventArgs e); 
         #endregion
-        public Database(string path)
+        public Database()
         {
             //Use in-memory Sqlite DB instead
             var dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Calls.db");

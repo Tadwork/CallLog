@@ -2,16 +2,26 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Window1"
-        Height="451"
-        Width="339" Loaded="Window_Loaded">
-	<Grid>
-		<Grid.RowDefinitions>
+        Height="383"
+        Width="268" Loaded="Window_Loaded">
+	<Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
 			<RowDefinition/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-        <ListBox ItemsSource="{Binding Calls}" SelectionChanged="List_SelectionChanged" Name="List">
-            
-         
-        </ListBox>
+        <ListBox ItemsSource="{Binding Calls}" SelectionChanged="List_SelectionChanged" Name="List" Grid.ColumnSpan="2" Margin="0,146,0,0"/>
+        <Label Content="Server" RenderTransformOrigin="0.556,0.615" Height="33" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtServer" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <Label Content="Account" Margin="0,26,0,0" RenderTransformOrigin="0.556,0.615" Height="33" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtAccount" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,28,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <Label Content="Password" Margin="0,51,0,0" RenderTransformOrigin="0.566,0.385" Height="33" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtPassword" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,52,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <Label x:Name="ConnectionStatus" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="0,80,0,0" VerticalAlignment="Top" Width="234"/>
+        <Label x:Name="CallStatus" Content="Label" Margin="0,80,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="0,113,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

@@ -77,14 +77,13 @@ namespace FPECallLog
                 Shutdown(1);
             }
             else { 
-                      StartDB();
+                      if(e.Args.Length > 0 ){
+                       db = new Database();
                        AddCallFromArgs(e.Args);  
+                      }
             }
         }
-        private void StartDB(){
-            var dbPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Calls.db");
-            db = new Database(dbPath);
-        }
+       
         private void AddCallFromArgs(string[] args)
         {
             //if (args.Length == 2)
@@ -94,12 +93,14 @@ namespace FPECallLog
             bool show_help = false;
             string name = "unknown";
             string phone = "000000000";
-
+            string call = "000000000";
             var p = new OptionSet() {
     { "n|name=" , "the {NAME} of caller.",
        n => name = n },
    { "p|phone=", "the {Phone} of caller.",
        d => phone = d },
+       { "c|call=", "the number to call.",
+       c => call = c },
     //{ "h|help",  "show this message and exit", 
     //   v => show_help = v != null },
             };
@@ -126,7 +127,7 @@ namespace FPECallLog
             e.BringToForeground = false;
             if (e.Args.Length > 0)
             {
-                StartDB();
+                db = new Database();
                 AddCallFromArgs(e.Args);
                 Window1 w = (Window1)App.Current.MainWindow;
 

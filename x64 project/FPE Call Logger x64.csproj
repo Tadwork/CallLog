@@ -184,11 +184,13 @@
       <DependentUpon>Accounts.settings</DependentUpon>
     </Compile>
     <Compile Include="Phone.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Phone.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="PhoneConfig.cs" />
+    <Compile Include="PhoneConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

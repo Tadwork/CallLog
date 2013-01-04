@@ -26,12 +26,12 @@ using System.Text;
 using System.Xml;
 using Sipek.Common;
 
-namespace SIP_Notifier
+namespace FPECallLog
 {
     internal class PhoneConfig : IConfiguratorInterface
     {
 
-        SIP_Notifier.Phone settings = SIP_Notifier.Phone.Default;
+        FPECallLog.Phone settings = FPECallLog.Phone.Default;
 
         List<IAccount> _acclist = new List<IAccount>();
 
@@ -144,7 +144,7 @@ namespace SIP_Notifier
 
     class AccountConfig : IAccount
     {
-        SIP_Notifier.Accounts settings = SIP_Notifier.Accounts.Default;
+        FPECallLog.Accounts settings = FPECallLog.Accounts.Default;
 
         #region IAccount Members
 

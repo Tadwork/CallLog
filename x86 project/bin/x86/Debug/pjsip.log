@@ -1,0 +1,131 @@
+ 12:35:48.043 sip_endpoint.c  Module "mod-pjsua-log" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-tsx-layer" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-stateful-util" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-ua" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-100rel" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-pjsua" registered
+ 12:35:48.043 sip_endpoint.c  Module "mod-invite" registered
+ 12:35:48.043      pasound.c  PA message: before paHostApiInitializers[0].
+
+ 12:35:48.132      pasound.c  PA message: after paHostApiInitializers[0].
+
+ 12:35:48.132      pasound.c  PA message: before paHostApiInitializers[1].
+
+ 12:35:48.211      pasound.c  PA message: after paHostApiInitializers[1].
+
+ 12:35:48.211      pasound.c  PA message: before paHostApiInitializers[2].
+
+ 12:35:48.211      pasound.c  PA message: after paHostApiInitializers[2].
+
+ 12:35:48.211      pasound.c  PortAudio sound library initialized, status=0
+ 12:35:48.211      pasound.c  PortAudio host api count=3
+ 12:35:48.211      pasound.c  Sound device count=16
+ 12:35:48.211          pjlib  WinNT IOCP I/O Queue created (08D4C1CC)
+ 12:35:48.212   conference.c  Creating conference bridge with 254 ports
+ 12:35:48.212   conference.c  Sound device successfully created for port 0
+ 12:35:48.212 sip_endpoint.c  Module "mod-evsub" registered
+ 12:35:48.212 sip_endpoint.c  Module "mod-presence" registered
+ 12:35:48.212        evsub.c  Event pkg "presence" registered by mod-presence
+ 12:35:48.212 sip_endpoint.c  Module "mod-refer" registered
+ 12:35:48.212        evsub.c  Event pkg "refer" registered by mod-refer
+ 12:35:48.212 sip_endpoint.c  Module "mod-pjsua-pres" registered
+ 12:35:48.212 sip_endpoint.c  Module "mod-pjsua-im" registered
+ 12:35:48.212 sip_endpoint.c  Module "mod-pjsua-options" registered
+ 12:35:48.213   pjsua_core.c  1 SIP worker threads created
+ 12:35:48.213   pjsua_core.c  pjsua version 1.0 for win32 initialized
+ 12:35:48.218   pjsua_core.c  SIP UDP socket reachable at 192.168.1.118:5060
+ 12:35:48.218    udp08D4EE78  SIP UDP transport started, published address is 192.168.1.118:5060
+ 12:35:48.219    pjsua_acc.c  Account <sip:192.168.1.118:5060> added with id 0
+ 12:35:48.221    tcplis:5060  SIP TCP listener ready for incoming connections at 192.168.1.118:5060
+ 12:35:48.221    pjsua_acc.c  Account <sip:192.168.1.118:5060;transport=TCP> added with id 1
+ 12:35:48.222  pjsua_media.c  RTP socket reachable at 192.168.1.118:4000
+ 12:35:48.222  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4001
+ 12:35:48.223  pjsua_media.c  RTP socket reachable at 192.168.1.118:4002
+ 12:35:48.223  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4003
+ 12:35:48.224  pjsua_media.c  RTP socket reachable at 192.168.1.118:4004
+ 12:35:48.224  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4005
+ 12:35:48.225  pjsua_media.c  RTP socket reachable at 192.168.1.118:4006
+ 12:35:48.225  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4007
+ 12:35:48.226 sip_endpoint.c  Module "My-Module" registered
+ 12:35:48.230    pjsua_acc.c  Account id 0 deleted
+ 12:35:48.230    pjsua_acc.c  Account id 1 deleted
+ 12:35:48.237    pjsua_acc.c  Account sip:3000@localhost added with id 0
+ 12:35:48.237       endpoint  Request msg REGISTER/cseq=44358 (tdta08D65EA8) created.
+ 12:35:48.237    tsx08D66F14  Transaction created for Request msg REGISTER/cseq=44359 (tdta08D65EA8)
+ 12:35:48.237    tsx08D66F14  Sending Request msg REGISTER/cseq=44359 (tdta08D65EA8) in state Null
+ 12:35:48.237  sip_resolve.c  DNS resolver not available, target 'localhost:0' type=Unspecified will be resolved with gethostbyname()
+ 12:35:48.238  sip_resolve.c  Target 'localhost:0' type=Unspecified resolved to '127.0.0.1:5060' type=UDP (UDP transport)
+ 12:35:48.239   pjsua_core.c  TX 414 bytes Request msg REGISTER/cseq=44359 (tdta08D65EA8) to UDP 127.0.0.1:5060:
+REGISTER sip:localhost SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPjffe589afd34b4bd080279abaca5c2ab6
+Max-Forwards: 70
+From: <sip:3000@localhost>;tag=a6392f74c061465dbf2666125eb181fb
+To: <sip:3000@localhost>
+Call-ID: d04a85f9660e427da90498d28b2a6d1a
+CSeq: 44359 REGISTER
+User-Agent: Sipek on PJSUA v1.0/win32
+Contact: <sip:3000@192.168.1.118:5060>
+Expires: 3600
+Content-Length:  0
+
+
+--end msg--
+ 12:35:48.239    tsx08D66F14  State changed from Null to Calling, event=TX_MSG
+ 12:35:48.239    pjsua_acc.c  Registration sent
+ 12:35:48.247 sip_endpoint.c  Processing incoming message: Request msg REGISTER/cseq=44359 (rdata08D5AED4)
+ 12:35:48.247   pjsua_core.c  RX 414 bytes Request msg REGISTER/cseq=44359 (rdata08D5AED4) from UDP 127.0.0.1:5060:
+REGISTER sip:localhost SIP/2.0
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPjffe589afd34b4bd080279abaca5c2ab6
+Max-Forwards: 70
+From: <sip:3000@localhost>;tag=a6392f74c061465dbf2666125eb181fb
+To: <sip:3000@localhost>
+Call-ID: d04a85f9660e427da90498d28b2a6d1a
+CSeq: 44359 REGISTER
+User-Agent: Sipek on PJSUA v1.0/win32
+Contact: <sip:3000@192.168.1.118:5060>
+Expires: 3600
+Content-Length:  0
+
+
+--end msg--
+ 12:35:48.263       endpoint  Response msg 200/REGISTER/cseq=44359 (tdta08D676B8) created
+ 12:35:48.263   pjsua_core.c  TX 310 bytes Response msg 200/REGISTER/cseq=44359 (tdta08D676B8) to UDP 127.0.0.1:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport=5060;received=127.0.0.1;branch=z9hG4bKPjffe589afd34b4bd080279abaca5c2ab6
+Call-ID: d04a85f9660e427da90498d28b2a6d1a
+From: <sip:3000@localhost>;tag=a6392f74c061465dbf2666125eb181fb
+To: <sip:3000@localhost>
+CSeq: 44359 REGISTER
+Content-Length:  0
+
+
+--end msg--
+ 12:35:48.901   tdta08D676B8  Destroying txdata Response msg 200/REGISTER/cseq=44359 (tdta08D676B8)
+ 12:35:48.901 sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=44359 (rdata08D5AED4)
+ 12:35:48.901   pjsua_core.c  RX 310 bytes Response msg 200/REGISTER/cseq=44359 (rdata08D5AED4) from UDP 127.0.0.1:5060:
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport=5060;received=127.0.0.1;branch=z9hG4bKPjffe589afd34b4bd080279abaca5c2ab6
+Call-ID: d04a85f9660e427da90498d28b2a6d1a
+From: <sip:3000@localhost>;tag=a6392f74c061465dbf2666125eb181fb
+To: <sip:3000@localhost>
+CSeq: 44359 REGISTER
+Content-Length:  0
+
+
+--end msg--
+ 12:35:48.901    tsx08D66F14  Incoming Response msg 200/REGISTER/cseq=44359 (rdata08D5AED4) in state Calling
+ 12:35:48.901    tsx08D66F14  State changed from Calling to Completed, event=RX_MSG
+ 12:35:48.901    pjsua_acc.c  sip:3000@localhost: registration success, status=200 (OK), will re-register in 3600 seconds
+ 12:35:48.901    pjsua_acc.c  Keep-alive timer started for acc 0, destination:127.0.0.1:5060, interval:15s
+ 12:35:53.902    tsx08D66F14  Timeout timer event
+ 12:35:53.902    tsx08D66F14  State changed from Completed to Terminated, event=TIMER
+ 12:35:53.902    tsx08D66F14  Timeout timer event
+ 12:35:53.902    tsx08D66F14  State changed from Terminated to Destroyed, event=TIMER
+ 12:35:53.902   tdta08D65EA8  Destroying txdata Request msg REGISTER/cseq=44359 (tdta08D65EA8)
+ 12:35:53.902    tsx08D66F14  Transaction destroyed!
+ 12:36:03.902    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 127.0.0.1:5060
+ 12:36:03.902   tdta08D65EA8  Destroying txdata raw
+ 12:36:18.904    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 127.0.0.1:5060
+ 12:36:18.904   tdta08D660C8  Destroying txdata raw
+ 12:36:33.904    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 127.0.0.1:5060
+ 12:36:33.904   tdta08D660C8  Destroying txdata raw
