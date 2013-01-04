@@ -114,6 +114,9 @@
     <Reference Include="NDesk.Options">
       <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
     </Reference>
+    <Reference Include="pjsipDll">
+      <HintPath>..\pjsipDll.dll</HintPath>
+    </Reference>
     <Reference Include="ServiceStack.Common, Version=1.0.4404.29933, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\ServiceStack.Common.3.3.6\lib\ServiceStack.Common.dll</HintPath>
@@ -131,6 +134,9 @@
     <Reference Include="ServiceStack.Text">
       <HintPath>packages\ServiceStack.Text.3.2.2\lib\ServiceStack.Text.dll</HintPath>
     </Reference>
+    <Reference Include="SipekSdk">
+      <HintPath>..\SipekSdk.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -145,6 +151,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -170,6 +177,18 @@
       <Link>Window1.xaml.cs</Link>
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Accounts.cs" />
+    <Compile Include="Accounts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Accounts.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Phone.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Phone.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -190,7 +209,15 @@
     <None Include="..\app.config">
       <Link>app.config</Link>
     </None>
+    <None Include="Accounts.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Accounts.Designer.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
+    <None Include="Phone.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Phone.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
