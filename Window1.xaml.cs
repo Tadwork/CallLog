@@ -95,7 +95,7 @@ namespace FPECallLog
             //this.Visible = false;
             //this.ShowInTaskbar = false;
 
-            //notifyIcon1.Icon = this.Icon;
+            notifyIcon1.Icon = FPECallLog.Resources.Icon;
             notifyIcon1.Text = "SIP Notifier"; 
             notifyIcon1.Visible = true;
             notifyIcon1.DoubleClick += new EventHandler(NotifyIconDoubleClick);
@@ -277,7 +277,7 @@ namespace FPECallLog
             Database  db =  new Database();
             string name = incall.CallingName;
             db.AddCall(name, number);
-             
+            DataContext = new CallViewModel();
             //textBoxLastCallNumber.Text = number;
             //textBoxLastCallDate.Text = DateTime.Now.ToString();
 
@@ -318,7 +318,7 @@ namespace FPECallLog
 
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
             if (TxtServer.Text == "")
             {
@@ -377,18 +377,62 @@ namespace FPECallLog
                 if(null != BtnSave)BtnSave.IsEnabled = true;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Database db = new Database();
+            db.AddCall("test Name", "999-999-9999");
+            DataContext = new CallViewModel();
+        }
+
+       
+
 
        
     }
     public class CallViewModel
         {   private Database  db;
             private ICollectionView _callsView;
+            private string _server;
+            private string _account;
+            private string _password;
 
-            public ICollectionView Calls
+            
+            private string _callstate;
+
+
+            private string _regstate;
+            public string CallState
             {
-                get { return _callsView; }
+                get { return _callstate; }
+                set { _callstate = value; }
+            }
+            public string Password
+            {
+                get { return _password; }
+                set { _password = value; }
+            }
+            public string RegistrationState
+            {
+                get { return _regstate; }
+                set { _regstate = value; }
             }
 
+            public string Account
+            {
+                get { return _account; }
+                set { _account = value; }
+            }
+            
+            public string Server
+            {
+                get { return this._server; }
+                set { this._server = value; }
+            }
+            public ICollectionView Calls
+            {
+                get { return this._callsView; }
+            }
+   
             public CallViewModel()
             {
                 UpdateCalls();

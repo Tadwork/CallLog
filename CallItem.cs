@@ -15,6 +15,9 @@ namespace FPECallLog
         public string Name { get; set; }
         public string Phone { get; set; }
         public DateTime Time { get; set; }
+        public string Email { get; set; }
+        public string Notes { get; set; }
+        public string User { get; set; }
         public override string ToString()
         {
             return Name + " " + Phone;
@@ -57,11 +60,12 @@ namespace FPECallLog
         #region Create
         public void AddCall(string name, string phone)
         {
-
+             if(phone.Contains("@")){
+                phone = phone.Remove(phone.IndexOf("@"));}
             AddCall(new CallItem()
             {
                 Name = name,
-                Phone = phone.Remove(phone.IndexOf("@")),
+                Phone = phone,
                 Time = DateTime.Now
             });
         }
