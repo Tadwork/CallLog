@@ -1,68 +1,68 @@
- 14:32:23.007 sip_endpoint.c  Module "mod-pjsua-log" registered
- 14:32:23.007 sip_endpoint.c  Module "mod-tsx-layer" registered
- 14:32:23.007 sip_endpoint.c  Module "mod-stateful-util" registered
- 14:32:23.007 sip_endpoint.c  Module "mod-ua" registered
- 14:32:23.008 sip_endpoint.c  Module "mod-100rel" registered
- 14:32:23.008 sip_endpoint.c  Module "mod-pjsua" registered
- 14:32:23.008 sip_endpoint.c  Module "mod-invite" registered
- 14:32:23.008      pasound.c  PA message: before paHostApiInitializers[0].
+ 16:27:00.900 sip_endpoint.c  Module "mod-pjsua-log" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-tsx-layer" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-stateful-util" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-ua" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-100rel" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-pjsua" registered
+ 16:27:00.901 sip_endpoint.c  Module "mod-invite" registered
+ 16:27:00.901      pasound.c  PA message: before paHostApiInitializers[0].
 
- 14:32:23.111      pasound.c  PA message: after paHostApiInitializers[0].
+ 16:27:01.000      pasound.c  PA message: after paHostApiInitializers[0].
 
- 14:32:23.111      pasound.c  PA message: before paHostApiInitializers[1].
+ 16:27:01.000      pasound.c  PA message: before paHostApiInitializers[1].
 
- 14:32:23.228      pasound.c  PA message: after paHostApiInitializers[1].
+ 16:27:01.107      pasound.c  PA message: after paHostApiInitializers[1].
 
- 14:32:23.228      pasound.c  PA message: before paHostApiInitializers[2].
+ 16:27:01.107      pasound.c  PA message: before paHostApiInitializers[2].
 
- 14:32:23.229      pasound.c  PA message: after paHostApiInitializers[2].
+ 16:27:01.107      pasound.c  PA message: after paHostApiInitializers[2].
 
- 14:32:23.229      pasound.c  PortAudio sound library initialized, status=0
- 14:32:23.229      pasound.c  PortAudio host api count=3
- 14:32:23.229      pasound.c  Sound device count=16
- 14:32:23.229          pjlib  WinNT IOCP I/O Queue created (0685C1CC)
- 14:32:23.229   conference.c  Creating conference bridge with 254 ports
- 14:32:23.230   conference.c  Sound device successfully created for port 0
- 14:32:23.230 sip_endpoint.c  Module "mod-evsub" registered
- 14:32:23.230 sip_endpoint.c  Module "mod-presence" registered
- 14:32:23.230        evsub.c  Event pkg "presence" registered by mod-presence
- 14:32:23.230 sip_endpoint.c  Module "mod-refer" registered
- 14:32:23.230        evsub.c  Event pkg "refer" registered by mod-refer
- 14:32:23.230 sip_endpoint.c  Module "mod-pjsua-pres" registered
- 14:32:23.230 sip_endpoint.c  Module "mod-pjsua-im" registered
- 14:32:23.230 sip_endpoint.c  Module "mod-pjsua-options" registered
- 14:32:23.230   pjsua_core.c  1 SIP worker threads created
- 14:32:23.230   pjsua_core.c  pjsua version 1.0 for win32 initialized
- 14:32:23.235   pjsua_core.c  SIP UDP socket reachable at 192.168.1.118:5060
- 14:32:23.235    udp0685EE78  SIP UDP transport started, published address is 192.168.1.118:5060
- 14:32:23.236    pjsua_acc.c  Account <sip:192.168.1.118:5060> added with id 0
- 14:32:23.237    tcplis:5060  SIP TCP listener ready for incoming connections at 192.168.1.118:5060
- 14:32:23.238    pjsua_acc.c  Account <sip:192.168.1.118:5060;transport=TCP> added with id 1
- 14:32:23.239  pjsua_media.c  RTP socket reachable at 192.168.1.118:4000
- 14:32:23.239  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4001
- 14:32:23.240  pjsua_media.c  RTP socket reachable at 192.168.1.118:4002
- 14:32:23.240  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4003
- 14:32:23.241  pjsua_media.c  RTP socket reachable at 192.168.1.118:4004
- 14:32:23.241  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4005
- 14:32:23.243  pjsua_media.c  RTP socket reachable at 192.168.1.118:4006
- 14:32:23.243  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4007
- 14:32:23.244 sip_endpoint.c  Module "My-Module" registered
- 14:32:23.248    pjsua_acc.c  Account id 0 deleted
- 14:32:23.248    pjsua_acc.c  Account id 1 deleted
- 14:32:23.256    pjsua_acc.c  Account sip:VH253349@sip-52760.accounts.vocalocity.com added with id 0
- 14:32:23.256       endpoint  Request msg REGISTER/cseq=11777 (tdta06875E90) created.
- 14:32:23.256    tsx06876EFC  Transaction created for Request msg REGISTER/cseq=11778 (tdta06875E90)
- 14:32:23.256    tsx06876EFC  Sending Request msg REGISTER/cseq=11778 (tdta06875E90) in state Null
- 14:32:23.256  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
- 14:32:23.257  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
- 14:32:23.257   pjsua_core.c  TX 498 bytes Request msg REGISTER/cseq=11778 (tdta06875E90) to UDP 205.139.46.211:5060:
+ 16:27:01.107      pasound.c  PortAudio sound library initialized, status=0
+ 16:27:01.107      pasound.c  PortAudio host api count=3
+ 16:27:01.107      pasound.c  Sound device count=16
+ 16:27:01.107          pjlib  WinNT IOCP I/O Queue created (06BBC1CC)
+ 16:27:01.108   conference.c  Creating conference bridge with 254 ports
+ 16:27:01.108   conference.c  Sound device successfully created for port 0
+ 16:27:01.108 sip_endpoint.c  Module "mod-evsub" registered
+ 16:27:01.108 sip_endpoint.c  Module "mod-presence" registered
+ 16:27:01.108        evsub.c  Event pkg "presence" registered by mod-presence
+ 16:27:01.108 sip_endpoint.c  Module "mod-refer" registered
+ 16:27:01.108        evsub.c  Event pkg "refer" registered by mod-refer
+ 16:27:01.108 sip_endpoint.c  Module "mod-pjsua-pres" registered
+ 16:27:01.108 sip_endpoint.c  Module "mod-pjsua-im" registered
+ 16:27:01.108 sip_endpoint.c  Module "mod-pjsua-options" registered
+ 16:27:01.109   pjsua_core.c  1 SIP worker threads created
+ 16:27:01.109   pjsua_core.c  pjsua version 1.0 for win32 initialized
+ 16:27:01.123   pjsua_core.c  SIP UDP socket reachable at 192.168.1.118:5060
+ 16:27:01.123    udp06BBEE78  SIP UDP transport started, published address is 192.168.1.118:5060
+ 16:27:01.124    pjsua_acc.c  Account <sip:192.168.1.118:5060> added with id 0
+ 16:27:01.125    tcplis:5060  SIP TCP listener ready for incoming connections at 192.168.1.118:5060
+ 16:27:01.125    pjsua_acc.c  Account <sip:192.168.1.118:5060;transport=TCP> added with id 1
+ 16:27:01.126  pjsua_media.c  RTP socket reachable at 192.168.1.118:4000
+ 16:27:01.126  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4001
+ 16:27:01.128  pjsua_media.c  RTP socket reachable at 192.168.1.118:4002
+ 16:27:01.128  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4003
+ 16:27:01.129  pjsua_media.c  RTP socket reachable at 192.168.1.118:4004
+ 16:27:01.129  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4005
+ 16:27:01.130  pjsua_media.c  RTP socket reachable at 192.168.1.118:4006
+ 16:27:01.130  pjsua_media.c  RTCP socket reachable at 192.168.1.118:4007
+ 16:27:01.132 sip_endpoint.c  Module "My-Module" registered
+ 16:27:01.136    pjsua_acc.c  Account id 0 deleted
+ 16:27:01.136    pjsua_acc.c  Account id 1 deleted
+ 16:27:01.144    pjsua_acc.c  Account sip:VH253349@sip-52760.accounts.vocalocity.com added with id 0
+ 16:27:01.145       endpoint  Request msg REGISTER/cseq=52505 (tdta06BD5E90) created.
+ 16:27:01.145    tsx06BD6EFC  Transaction created for Request msg REGISTER/cseq=52506 (tdta06BD5E90)
+ 16:27:01.145    tsx06BD6EFC  Sending Request msg REGISTER/cseq=52506 (tdta06BD5E90) in state Null
+ 16:27:01.145  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
+ 16:27:01.146  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
+ 16:27:01.146   pjsua_core.c  TX 498 bytes Request msg REGISTER/cseq=52506 (tdta06BD5E90) to UDP 205.139.46.211:5060:
 REGISTER sip:sip-52760.accounts.vocalocity.com SIP/2.0
-Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj1851c966002249aa90837e5a03ee2c45
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj43dfcf839a6049e480ad1ca69a72f9a7
 Max-Forwards: 70
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=55bb0dff70264d7cac0b4ab54ef900ba
+From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=977402527e5b43019d4758c1d59825ba
 To: <sip:VH253349@sip-52760.accounts.vocalocity.com>
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11778 REGISTER
+Call-ID: 8f1999c6e7f04c33b16a570c95f941ff
+CSeq: 52506 REGISTER
 User-Agent: Sipek on PJSUA v1.0/win32
 Contact: <sip:VH253349@192.168.1.118:5060>
 Expires: 3600
@@ -70,151 +70,73 @@ Content-Length:  0
 
 
 --end msg--
- 14:32:23.258    tsx06876EFC  State changed from Null to Calling, event=TX_MSG
- 14:32:23.258    pjsua_acc.c  Registration sent
- 14:32:23.323 sip_endpoint.c  Processing incoming message: Response msg 401/REGISTER/cseq=11778 (rdata0686AEBC)
- 14:32:23.324   pjsua_core.c  RX 601 bytes Response msg 401/REGISTER/cseq=11778 (rdata0686AEBC) from UDP 205.139.46.211:5060:
+ 16:27:01.146    tsx06BD6EFC  State changed from Null to Calling, event=TX_MSG
+ 16:27:01.147    pjsua_acc.c  Registration sent
+ 16:27:01.189 sip_endpoint.c  Processing incoming message: Response msg 401/REGISTER/cseq=52506 (rdata06BCAEBC)
+ 16:27:01.189   pjsua_core.c  RX 601 bytes Response msg 401/REGISTER/cseq=52506 (rdata06BCAEBC) from UDP 205.139.46.211:5060:
 SIP/2.0 401 Unauthorized
-Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj1851c966002249aa90837e5a03ee2c45
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=55bb0dff70264d7cac0b4ab54ef900ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.2dfb
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11778 REGISTER
-WWW-Authenticate: Digest realm="sip-52760.accounts.vocalocity.com", nonce="50e9d15800037974112b0a77ecbe3472e55638380193e3d3"
+Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj43dfcf839a6049e480ad1ca69a72f9a7
+From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=977402527e5b43019d4758c1d59825ba
+To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.de90
+Call-ID: 8f1999c6e7f04c33b16a570c95f941ff
+CSeq: 52506 REGISTER
+WWW-Authenticate: Digest realm="sip-52760.accounts.vocalocity.com", nonce="50e9ec360000c8d98f6b6f9467d1bbbcfeba466c38bad912"
 Server: Vocalocity SIP (1.7.2-notls (x86_64/linux))
 Content-Length: 0
 
 
 --end msg--
- 14:32:23.925    tsx06876EFC  Incoming Response msg 401/REGISTER/cseq=11778 (rdata0686AEBC) in state Calling
- 14:32:23.925    tsx06876EFC  State changed from Calling to Completed, event=RX_MSG
- 14:32:23.925    tsx068786AC  Transaction created for Request msg REGISTER/cseq=11779 (tdta06875E90)
- 14:32:23.925    tsx068786AC  Sending Request msg REGISTER/cseq=11779 (tdta06875E90) in state Null
- 14:32:23.925  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
- 14:32:23.972  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
- 14:32:23.973   pjsua_core.c  TX 732 bytes Request msg REGISTER/cseq=11779 (tdta06875E90) to UDP 205.139.46.211:5060:
+ 16:27:01.812    tsx06BD6EFC  Incoming Response msg 401/REGISTER/cseq=52506 (rdata06BCAEBC) in state Calling
+ 16:27:01.812    tsx06BD6EFC  State changed from Calling to Completed, event=RX_MSG
+ 16:27:01.812    tsx06BD86AC  Transaction created for Request msg REGISTER/cseq=52507 (tdta06BD5E90)
+ 16:27:01.813    tsx06BD86AC  Sending Request msg REGISTER/cseq=52507 (tdta06BD5E90) in state Null
+ 16:27:01.813  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
+ 16:27:01.915  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
+ 16:27:01.915   pjsua_core.c  TX 732 bytes Request msg REGISTER/cseq=52507 (tdta06BD5E90) to UDP 205.139.46.211:5060:
 REGISTER sip:sip-52760.accounts.vocalocity.com SIP/2.0
-Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj015f5a0aaa2341da9a9004b22d058e40
+Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj8bd2f18f8eac47ebbd46e8bdd341b5d4
 Max-Forwards: 70
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=55bb0dff70264d7cac0b4ab54ef900ba
+From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=977402527e5b43019d4758c1d59825ba
 To: <sip:VH253349@sip-52760.accounts.vocalocity.com>
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11779 REGISTER
+Call-ID: 8f1999c6e7f04c33b16a570c95f941ff
+CSeq: 52507 REGISTER
 User-Agent: Sipek on PJSUA v1.0/win32
 Contact: <sip:VH253349@192.168.1.118:5060>
 Expires: 3600
-Authorization: Digest username="VH253349", realm="sip-52760.accounts.vocalocity.com", nonce="50e9d15800037974112b0a77ecbe3472e55638380193e3d3", uri="sip:sip-52760.accounts.vocalocity.com", response="c2acbdd397af95e13527f7afb058d849"
+Authorization: Digest username="VH253349", realm="sip-52760.accounts.vocalocity.com", nonce="50e9ec360000c8d98f6b6f9467d1bbbcfeba466c38bad912", uri="sip:sip-52760.accounts.vocalocity.com", response="cf3787a06c5380086b5aa0d148bd8b2b"
 Content-Length:  0
 
 
 --end msg--
- 14:32:23.973    tsx068786AC  State changed from Null to Calling, event=TX_MSG
- 14:32:24.034 sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=11779 (rdata0686AEBC)
- 14:32:24.034   pjsua_core.c  RX 555 bytes Response msg 200/REGISTER/cseq=11779 (rdata0686AEBC) from UDP 205.139.46.211:5060:
+ 16:27:01.915    tsx06BD86AC  State changed from Null to Calling, event=TX_MSG
+ 16:27:01.956 sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=52507 (rdata06BCAEBC)
+ 16:27:01.956   pjsua_core.c  RX 555 bytes Response msg 200/REGISTER/cseq=52507 (rdata06BCAEBC) from UDP 205.139.46.211:5060:
 SIP/2.0 200 OK
-Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj015f5a0aaa2341da9a9004b22d058e40
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=55bb0dff70264d7cac0b4ab54ef900ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.10ce
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11779 REGISTER
+Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj8bd2f18f8eac47ebbd46e8bdd341b5d4
+From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=977402527e5b43019d4758c1d59825ba
+To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.a3d6
+Call-ID: 8f1999c6e7f04c33b16a570c95f941ff
+CSeq: 52507 REGISTER
 Contact: <sip:VH253349@192.168.1.118:5060>;expires=45;received="sip:69.124.214.219:5060"
 Server: Vocalocity SIP (1.7.2-notls (x86_64/linux))
 Content-Length: 0
 
 
 --end msg--
- 14:32:24.034    tsx068786AC  Incoming Response msg 200/REGISTER/cseq=11779 (rdata0686AEBC) in state Calling
- 14:32:24.034    tsx068786AC  State changed from Calling to Completed, event=RX_MSG
- 14:32:24.034    pjsua_acc.c  sip:VH253349@sip-52760.accounts.vocalocity.com: registration success, status=200 (OK), will re-register in 45 seconds
- 14:32:24.034    pjsua_acc.c  Keep-alive timer started for acc 0, destination:205.139.46.211:5060, interval:15s
- 14:32:28.974    tsx06876EFC  Timeout timer event
- 14:32:28.974    tsx06876EFC  State changed from Completed to Terminated, event=TIMER
- 14:32:28.974    tsx06876EFC  Timeout timer event
- 14:32:28.974    tsx06876EFC  State changed from Terminated to Destroyed, event=TIMER
- 14:32:28.974    tsx06876EFC  Transaction destroyed!
- 14:32:29.037    tsx068786AC  Timeout timer event
- 14:32:29.037    tsx068786AC  State changed from Completed to Terminated, event=TIMER
- 14:32:29.037    tsx068786AC  Timeout timer event
- 14:32:29.037    tsx068786AC  State changed from Terminated to Destroyed, event=TIMER
- 14:32:29.037   tdta06875E90  Destroying txdata Request msg REGISTER/cseq=11779 (tdta06875E90)
- 14:32:29.037    tsx068786AC  Transaction destroyed!
- 14:32:39.035    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 205.139.46.211:5060
- 14:32:39.035   tdta06875E90  Destroying txdata raw
- 14:32:54.036    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 205.139.46.211:5060
- 14:32:54.036   tdta06875E90  Destroying txdata raw
- 14:33:04.035       endpoint  Request msg REGISTER/cseq=11779 (tdta06875E90) created.
- 14:33:04.035    tsx06876EFC  Transaction created for Request msg REGISTER/cseq=11780 (tdta06875E90)
- 14:33:04.035    tsx06876EFC  Sending Request msg REGISTER/cseq=11780 (tdta06875E90) in state Null
- 14:33:04.035  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
- 14:33:04.075  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
- 14:33:04.075   pjsua_core.c  TX 498 bytes Request msg REGISTER/cseq=11780 (tdta06875E90) to UDP 205.139.46.211:5060:
-REGISTER sip:sip-52760.accounts.vocalocity.com SIP/2.0
-Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj2f701b5b46b54768b24090209f8adce1
-Max-Forwards: 70
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=fafa7e7e65e94b30ab48d73d81c491ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11780 REGISTER
-User-Agent: Sipek on PJSUA v1.0/win32
-Contact: <sip:VH253349@192.168.1.118:5060>
-Expires: 3600
-Content-Length:  0
-
-
---end msg--
- 14:33:04.076    tsx06876EFC  State changed from Null to Calling, event=TX_MSG
- 14:33:04.121 sip_endpoint.c  Processing incoming message: Response msg 401/REGISTER/cseq=11780 (rdata0686AEBC)
- 14:33:04.121   pjsua_core.c  RX 601 bytes Response msg 401/REGISTER/cseq=11780 (rdata0686AEBC) from UDP 205.139.46.211:5060:
-SIP/2.0 401 Unauthorized
-Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj2f701b5b46b54768b24090209f8adce1
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=fafa7e7e65e94b30ab48d73d81c491ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.0292
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11780 REGISTER
-WWW-Authenticate: Digest realm="sip-52760.accounts.vocalocity.com", nonce="50e9d1810001a9fdeaf36fb0a0f80fbbb43b0199165d52bb"
-Server: Vocalocity SIP (1.7.2-notls (x86_64/linux))
-Content-Length: 0
-
-
---end msg--
- 14:33:04.121    tsx06876EFC  Incoming Response msg 401/REGISTER/cseq=11780 (rdata0686AEBC) in state Calling
- 14:33:04.121    tsx06876EFC  State changed from Calling to Completed, event=RX_MSG
- 14:33:04.121    tsx068786AC  Transaction created for Request msg REGISTER/cseq=11781 (tdta06875E90)
- 14:33:04.122    tsx068786AC  Sending Request msg REGISTER/cseq=11781 (tdta06875E90) in state Null
- 14:33:04.122  sip_resolve.c  DNS resolver not available, target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified will be resolved with gethostbyname()
- 14:33:04.149  sip_resolve.c  Target 'sip-52760.accounts.vocalocity.com:0' type=Unspecified resolved to '205.139.46.211:5060' type=UDP (UDP transport)
- 14:33:04.149   pjsua_core.c  TX 732 bytes Request msg REGISTER/cseq=11781 (tdta06875E90) to UDP 205.139.46.211:5060:
-REGISTER sip:sip-52760.accounts.vocalocity.com SIP/2.0
-Via: SIP/2.0/UDP 192.168.1.118:5060;rport;branch=z9hG4bKPj8a5833f8ca97425f96f6bc0399368d81
-Max-Forwards: 70
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=fafa7e7e65e94b30ab48d73d81c491ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11781 REGISTER
-User-Agent: Sipek on PJSUA v1.0/win32
-Contact: <sip:VH253349@192.168.1.118:5060>
-Expires: 3600
-Authorization: Digest username="VH253349", realm="sip-52760.accounts.vocalocity.com", nonce="50e9d1810001a9fdeaf36fb0a0f80fbbb43b0199165d52bb", uri="sip:sip-52760.accounts.vocalocity.com", response="084aebb9c2dd157bc56843205a4c31ac"
-Content-Length:  0
-
-
---end msg--
- 14:33:04.755    tsx068786AC  State changed from Null to Calling, event=TX_MSG
- 14:33:04.794 sip_endpoint.c  Processing incoming message: Response msg 200/REGISTER/cseq=11781 (rdata0686AEBC)
- 14:33:04.794   pjsua_core.c  RX 555 bytes Response msg 200/REGISTER/cseq=11781 (rdata0686AEBC) from UDP 205.139.46.211:5060:
-SIP/2.0 200 OK
-Via: SIP/2.0/UDP 192.168.1.118:5060;received=69.124.214.219;rport=5060;branch=z9hG4bKPj8a5833f8ca97425f96f6bc0399368d81
-From: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=fafa7e7e65e94b30ab48d73d81c491ba
-To: <sip:VH253349@sip-52760.accounts.vocalocity.com>;tag=c97b4d1cb1f3d0da549e06a8d482ef63.b6a6
-Call-ID: e22ff28b4e4c433cb58a82fcec54c849
-CSeq: 11781 REGISTER
-Contact: <sip:VH253349@192.168.1.118:5060>;expires=45;received="sip:69.124.214.219:5060"
-Server: Vocalocity SIP (1.7.2-notls (x86_64/linux))
-Content-Length: 0
-
-
---end msg--
- 14:33:04.794    tsx068786AC  Incoming Response msg 200/REGISTER/cseq=11781 (rdata0686AEBC) in state Calling
- 14:33:04.794    tsx068786AC  State changed from Calling to Completed, event=RX_MSG
- 14:33:04.794    pjsua_acc.c  sip:VH253349@sip-52760.accounts.vocalocity.com: registration success, status=200 (OK), will re-register in 45 seconds
- 14:33:04.794    pjsua_acc.c  Keep-alive timer started for acc 0, destination:205.139.46.211:5060, interval:15s
+ 16:27:01.956    tsx06BD86AC  Incoming Response msg 200/REGISTER/cseq=52507 (rdata06BCAEBC) in state Calling
+ 16:27:01.956    tsx06BD86AC  State changed from Calling to Completed, event=RX_MSG
+ 16:27:01.956    pjsua_acc.c  sip:VH253349@sip-52760.accounts.vocalocity.com: registration success, status=200 (OK), will re-register in 45 seconds
+ 16:27:01.956    pjsua_acc.c  Keep-alive timer started for acc 0, destination:205.139.46.211:5060, interval:15s
+ 16:27:06.916    tsx06BD6EFC  Timeout timer event
+ 16:27:06.916    tsx06BD6EFC  State changed from Completed to Terminated, event=TIMER
+ 16:27:06.916    tsx06BD6EFC  Timeout timer event
+ 16:27:06.916    tsx06BD6EFC  State changed from Terminated to Destroyed, event=TIMER
+ 16:27:06.916    tsx06BD6EFC  Transaction destroyed!
+ 16:27:06.957    tsx06BD86AC  Timeout timer event
+ 16:27:06.957    tsx06BD86AC  State changed from Completed to Terminated, event=TIMER
+ 16:27:06.957    tsx06BD86AC  Timeout timer event
+ 16:27:06.957    tsx06BD86AC  State changed from Terminated to Destroyed, event=TIMER
+ 16:27:06.957   tdta06BD5E90  Destroying txdata Request msg REGISTER/cseq=52507 (tdta06BD5E90)
+ 16:27:06.957    tsx06BD86AC  Transaction destroyed!
+ 16:27:16.957    pjsua_acc.c  Sending 2 bytes keep-alive packet for acc 0 to 205.139.46.211:5060
+ 16:27:16.957   tdta06BD5E90  Destroying txdata raw

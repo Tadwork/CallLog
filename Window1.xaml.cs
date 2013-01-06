@@ -7,9 +7,13 @@
     using System.Collections.Generic;
     using System.Windows.Data;
     using System.Windows.Forms;
+    using System.Windows;
+    using System.Windows.Input;
     using Sipek.Common.CallControl;
     using Sipek.Sip;
     using Sipek.Common;
+    using Tako.GlobalHotKey;
+    using WindowsInput;
     #endregion
 namespace FPECallLog
 {
@@ -20,10 +24,10 @@ namespace FPECallLog
     /// </summary>
     public partial class Window1 : Window
     {
+        private Tako.GlobalHotKey.HotKeyProvider m_Provider;
                #region Properties
         // Get call manager instance
         CCallManager CallManager = CCallManager.Instance;
-        
         private PhoneConfig _config = new PhoneConfig();
         internal PhoneConfig Config
         {
@@ -38,6 +42,7 @@ namespace FPECallLog
         //private Contacts contacts = new Contacts();
        private NotifyIcon notifyIcon1 = new NotifyIcon();
         private ContextMenu contextMenu = new ContextMenu();
+        
         #endregion
         /// <summary>
         ///   Initializes a new instance of the <see cref = "Window1" /> class.
@@ -69,8 +74,32 @@ namespace FPECallLog
        
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {DataContext = new CallViewModel();
+        this.m_Provider = new HotKeyProvider();
+        this.m_Provider.HotKeyPressed += m_Provider_HotKeyPressed;
+        var key1 = m_Provider.Register(ModifierKeys.None, Key.F6);
         }
 
+        private void m_Provider_HotKeyPressed(object sender, HotKeyPressedEventArgs e)
+        {
+            if ( e.HotKey.Key == Key.F6)
+            {
+                //string oldtext = System.Windows.Clipboard.GetText();
+                
+                InputSimulator.SimulateModifiedKeyStroke(VirtualKeyCode.CONTROL, VirtualKeyCode.VK_C);
+                System.Threading.Thread.Sleep(50);
+                string numToCall = System.Windows.Clipboard.GetText();
+                this.TxtNumToCall.Text = numToCall;
+                
+                //System.Windows.Clipboard.SetText(oldtext);
+                
+            }
+            //else if (e.HotKey.ModifierKeys == (ModifierKeys.Alt | ModifierKeys.Control) && e.HotKey.Key == Key.F4)
+            //{
+            //  //  MessageBox.Show("ctrl+alt+f4");
+            //}
+        }
+
+        
         private void List_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             try
@@ -294,6 +323,10 @@ namespace FPECallLog
              */
         }
 
+        private int CallNumber(string number){
+
+            return status;
+        }
         #endregion
 
         #region Button Handlers
@@ -367,10 +400,6 @@ namespace FPECallLog
         //        this.Visible = false;
         //    }
         //}
-
-     
-        #endregion
-
         private void AccountInfo_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             
@@ -384,6 +413,15 @@ namespace FPECallLog
             DataContext = new CallViewModel();
         }
 
+        private void Button_Click_2(object sender, System.Windows.RoutedEventArgs e)
+        {
+            //implement call functionality
+        }
+     
+        #endregion
+
+
+
        
 
 
@@ -392,42 +430,39 @@ namespace FPECallLog
     public class CallViewModel
         {   private Database  db;
             private ICollectionView _callsView;
-            private string _server;
-            private string _account;
-            private string _password;
+            //private string _server;
+            //private string _account;
+            //private string _password;
+            //private string _callstate;
+            //private string _regstate;
 
+            //public string CallState
+            //{
+            //    get { return _callstate; }
+            //    set { _callstate = value; }
+            //}
+            //public string Password
+            //{
+            //    get { return _password; }
+            //    set { _password = value; }
+            //}
+            //public string RegistrationState
+            //{
+            //    get { return _regstate; }
+            //    set { _regstate = value; }
+            //}
+
+            //public string Account
+            //{
+            //    get { return _account; }
+            //    set { _account = value; }
+            //}
             
-            private string _callstate;
-
-
-            private string _regstate;
-            public string CallState
-            {
-                get { return _callstate; }
-                set { _callstate = value; }
-            }
-            public string Password
-            {
-                get { return _password; }
-                set { _password = value; }
-            }
-            public string RegistrationState
-            {
-                get { return _regstate; }
-                set { _regstate = value; }
-            }
-
-            public string Account
-            {
-                get { return _account; }
-                set { _account = value; }
-            }
-            
-            public string Server
-            {
-                get { return this._server; }
-                set { this._server = value; }
-            }
+            //public string Server
+            //{
+            //    get { return this._server; }
+            //    set { this._server = value; }
+            //}
             public ICollectionView Calls
             {
                 get { return this._callsView; }
@@ -446,8 +481,5 @@ namespace FPECallLog
         }
 
 
-
-
-
-
-}
+  
+    }

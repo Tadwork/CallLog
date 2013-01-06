@@ -66,3 +66,8 @@ C:\Users\Tzvi\Documents\call-log\x86 project\obj\x86\Debug\FPECallLog.pdb
 C:\Users\Tzvi\Documents\call-log\x86 project\obj\x86\Debug\FPECallLog.Resources.resources
 C:\Users\Tzvi\Documents\call-log\x86 project\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Tzvi\Documents\call-log\x86 project\obj\x86\Debug\FPECallLog_MarkupCompile.lref
+C:\Users\Tzvi\Documents\call-log\x86 project\bin\x86\Debug\InputSimulator.dll
+C:\Users\Tzvi\Documents\call-log\x86 project\bin\x86\Debug\Tako.GlobalHotKey.dll
+C:\Users\Tzvi\Documents\call-log\x86 project\bin\x86\Debug\InputSimulator.pdb
+C:\Users\Tzvi\Documents\call-log\x86 project\bin\x86\Debug\InputSimulator.xml
+C:\Users\Tzvi\Documents\call-log\x86 project\bin\x86\Debug\Tako.GlobalHotKey.pdb
