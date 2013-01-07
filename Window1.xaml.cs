@@ -14,6 +14,9 @@
     using Sipek.Common;
     using Tako.GlobalHotKey;
     using WindowsInput;
+using System.Net;
+using System.IO;
+using System.Text;
     #endregion
 namespace FPECallLog
 {
@@ -323,7 +326,20 @@ namespace FPECallLog
              */
         }
 
-        private int CallNumber(string number){
+        private int CallNumber(string from, string to){
+
+            int status = 200;
+            String url = "https://my.vocalocity.com/presence/rest/clicktocall/" + to;
+            WebRequest myReq = WebRequest.Create(url);
+            String username = "FPE302";
+            String password = "mkytak5f";
+            myReq.Headers.Add("login", username);
+            myReq.Headers.Add("password", password);
+
+            WebResponse wr = myReq.GetResponse();
+            Stream receiveStream = wr.GetResponseStream();
+            StreamReader reader = new StreamReader(receiveStream, Encoding.UTF8);
+            string content = reader.ReadToEnd();
 
             return status;
         }
@@ -415,6 +431,7 @@ namespace FPECallLog
 
         private void Button_Click_2(object sender, System.Windows.RoutedEventArgs e)
         {
+            CallNumber("302", "9177488059");
             //implement call functionality
         }
      
