@@ -117,7 +117,8 @@
     <Reference Include="NDesk.Options">
       <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
     </Reference>
-    <Reference Include="pjsipDll">
+    <Reference Include="pjsipDll, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\pjsipDll.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack.Common">

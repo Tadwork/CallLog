@@ -1,1 +1,0 @@
-C:\Users\Tzvi\Documents\VS Projects\Call-Log\x64 project\bin\x64\Debug\FPECallLog.exe.config

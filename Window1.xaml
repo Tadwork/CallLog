@@ -91,17 +91,17 @@
 
         </ListBox>
         <Label Content="Server" RenderTransformOrigin="0.556,0.615" Height="33" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtServer" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,2,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <TextBox x:Name="TxtServer" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="sip-52760.accounts.vocalocity.com" VerticalAlignment="Top" Margin="0,2,0,0" TextChanged="AccountInfo_TextChanged"/>
         <Label Content="Account" Margin="0,26,0,0" RenderTransformOrigin="0.556,0.615" Height="33" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtAccount" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,28,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <TextBox x:Name="TxtAccount" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="VH253349" VerticalAlignment="Top" Margin="0,28,0,0" TextChanged="AccountInfo_TextChanged"/>
         <Label Content="Password" Margin="0,51,0,0" RenderTransformOrigin="0.566,0.385" Height="33" VerticalAlignment="Top"/>
-        <TextBox x:Name="TxtPassword" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,52,0,0" TextChanged="AccountInfo_TextChanged"/>
+        <TextBox x:Name="TxtPassword" Grid.Column="1" Height="23" TextWrapping="Wrap" Text="Harry1" VerticalAlignment="Top" Margin="0,52,0,0" TextChanged="AccountInfo_TextChanged" CharacterCasing="Upper" />
         <Label x:Name="ConnectionStatus" Content="" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="0,80,0,0" VerticalAlignment="Top" Width="234"/>
         <Label x:Name="CallStatus" Content="" Margin="0,80,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BtnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Margin="0,113,0,0" VerticalAlignment="Top" Width="75" Click="buttonSave_Click"/>
         <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="168,113,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
             <TextBox x:Name="TxtNumToCall" Grid.Column="1" Height="23" Margin="0,140,111,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <Button Content="Call" Grid.Column="1" HorizontalAlignment="Left" Margin="248,141,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+            <Button Content="Call" Grid.Column="1" HorizontalAlignment="Left" Margin="239,140,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
         </Grid>
         </TabControl >
 </Window>

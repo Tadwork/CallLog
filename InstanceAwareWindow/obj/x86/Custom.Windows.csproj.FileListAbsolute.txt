@@ -1,0 +1,4 @@
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\bin\x86\Custom.Windows.dll
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Custom.Windows.Properties.Resources.resources
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Custom.Windows.csproj.GenerateResource.Cache
+C:\Users\Tzvi\Documents\VS Projects\Call-Log\InstanceAwareWindow\obj\x86\Custom.Windows.dll

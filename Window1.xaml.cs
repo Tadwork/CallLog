@@ -305,6 +305,7 @@ namespace FPECallLog
             //  number = contact + " (" + number + ")";
 
             CallStatus.Content = incall.StateId.ToString();
+            
             // TODO put the code here to put the call in the DB
             Database  db =  new Database();
             string name = incall.CallingName;
@@ -431,7 +432,7 @@ namespace FPECallLog
 
         private void Button_Click_2(object sender, System.Windows.RoutedEventArgs e)
         {
-            CallNumber("302", "9177488059");
+            CallNumber("302", TxtNumToCall.Text);
             //implement call functionality
         }
      
